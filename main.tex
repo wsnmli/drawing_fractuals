@@ -2,8 +2,10 @@
 
 \documentclass[12pt]{article}
 
-\usepackage{minted}
-\usepackage{amsfonts}
+\usepackage{minted}     % for including code 
+
+\usepackage{amsfonts}   % \mathbb
+\usepackage[toc,page]{appendix}
 
 \begin{document}
 
@@ -86,4 +88,8 @@
 \subsection{Cantors Comb}
 \subsection{Circles in circles}
 
+\begin{appendices}
+    \section{Useful code}
+    \inputminted{c++}{complex.hpp}
+\end{appendices}
 \end{document}
