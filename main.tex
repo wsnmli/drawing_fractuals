@@ -1,18 +1,22 @@
+%   pdflatex -shell-escape main.tex 
+
 \documentclass[12pt]{article}
 
-\usepackage{listings}
-\lstset{language=C}
-
+\usepackage{minted}
+\usepackage{amsfonts}
 
 \begin{document}
 
 \begin{titlepage}
+    
     {\centering
-        \title{{How to Draw Fractuals with C}\\}
+        \title{{How to Draw Fractals with C}\\}
         \author{Matthew James Lindsay}
-        \date{}
-        }
-    \maketitle
+        %\date{}
+    }
+        
+    \clearpage\maketitle
+    \thispagestyle{empty}
 \end{titlepage}
 
 \tableofcontents
@@ -23,16 +27,51 @@
      and absolutely no programming experience. 
 
 \section{Elementary Math}
+\subsection{Sets}
+    sets can be defined by listing its elements separated by commas in curly 
+    braces ie $S = \{1,2,3,4\}$
+    
+\subsection{Some useful sets}
+    $\mathbb{N}$ the set of natural numbers $ \mathbb{N}=\{0,1,2,3,\ldots\} $
+    
+    $\mathbb{Z}$ the set of of all integers $\mathbb{Z} = \{\ldots,-2-1,0,1,2,3,\ldots\}$
+
+    $\mathbb{Q}$ the set of rational numbers $\mathbb{Q} = \{\frac{a}{b} : a,b \in\mathbb{Z}, b \neq 0\}$
+
+    $\mathbb{R}$ the set of real numbers
+
+    $\mathbb{C}$ the set of complex numbers $\mathbb{C} = \{a+bi : a, b \in \mathbb{R}\}$
 \subsection{Functions}
+    functions map every element from one set of elements(domain) to an element of another set(codomain).
+    for example the function $f(x) = x^2$ maps the number 2 to 4 and -3 to 9. here the domain is 
+    $\mathbb{R}$ and the codmain is $\mathbb{R^+}$
 \subsection{Induction}
 
 \section{C and the Shell}
-    In this course we will be using C because C is the bestest!
+    In this course we will be using the C programing language because C is the bestest!
 \subsection{Hello World}
     Type the code in the following box into your favorite text editor
-    \lstinputlisting{hello.c}
+\inputminted{c}{hello.c}
     save as hello.c
-    
 
+    at the command line type
+
+    \texttt{gcc hello.c \&\& ./a.out}
+
+    this is really two commands, the first \texttt{gcc hello.c} compiles our source code into
+    machine language. this outputs the file \texttt{a.out} in the same directory as the 
+    source code.
+\subsection{defining functions}
+    In C functions are defined by writing the return type, the function name, and have 
+    the variables separated by commas in parentheses.
+
+    MAJOR DIFFERENCE between C functions and maths functions, C functions have SIDE EFFECTS!!!.
+
+\section{Drawing Geometry}
+\subsection{Cartesian Geometry}
+\subsection{Drawing dots}
+\subsection{for loops to draw lines}
+
+\section{Fractal Geometry}
 
 \end{document}
